@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 15% 15% 70%;
+  grid-template-rows: 10% 3.6% 41% 38.4% 7%;
+  grid-template-areas: "icon titulo titulo" "icon lista lista" "preview preview preview" "form villes villes" "footer footer footer";
+}
+.contenedor header, .contenedor .icon {
+  display: flex;
+  justify-items: center;
+  background-image: url("../assets/img/sky_bg.jfif");
+}
+.contenedor .icon {
+  justify-content: flex-start;
+  grid-area: icon;
+}
+.contenedor .icon img {
+  width: 120px;
+}
+.contenedor header {
+  justify-content: center;
+  grid-area: titulo;
+}
+.contenedor header h1 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-family: "Hurricane", cursive;
+  font-size: 60px;
+}
+.contenedor nav {
+  background-image: url("../assets/img/sky_bg.jfif");
+  grid-area: lista;
+}
+.contenedor nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.contenedor nav ul li {
+  list-style: none;
+}
+.contenedor nav ul li a {
+  text-decoration: none;
+  font-size: larger;
+  color: black;
+}
+.contenedor .preview {
+  display: flex;
+  justify-content: space-between;
+  border: 4px darkblue outset;
+  border-radius: 15px;
+  background-color: azure;
+  grid-area: preview;
+}
+.contenedor .preview img {
+  display: inline;
+  width: 370px;
+}
+.contenedor .form {
+  padding: 5px 0px 5px 5px;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 245px;
+  background-color: whitesmoke;
+  grid-area: form;
+}
+.contenedor .form label {
+  text-align: left;
+  width: 150px;
+}
+.contenedor .form input {
+  left: 150px;
+  width: 130px;
+}
+.contenedor .form textarea {
+  height: 200px;
+  width: 236px;
+}
+.contenedor .table {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  background-color: whitesmoke;
+  grid-area: villes;
+}
+.contenedor .table table {
+  display: inline-block;
+}
+.contenedor footer {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: white;
+  grid-area: footer;
+}
+.contenedor footer img {
+  width: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */

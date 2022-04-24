@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+$bgColor: #ffff;
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: $bgColor;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+.contenedor{
+    header, .icon{
+        display: flex;
+        justify-items: center;
+        background-image: url("../assets/img/sky_bg.jfif");
+    }
+    .icon{
+        justify-content: flex-start;
+        grid-area: icon;
+        img{
+            width: 120px;
+        }
+    }
+    header{
+        justify-content: center;
+        grid-area: titulo;
+        h1{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            font-family: 'Hurricane', cursive;
+            font-size: 60px;
+        }
+    }
+    
+    nav{
+        background-image: url("../assets/img/sky_bg.jfif");
+        grid-area: lista;
+        ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    font-size: larger;
+                    color: black;
+                }
+            }
+        }
+    }
+    .preview{
+        display: flex;
+        justify-content: space-between;
+        border: 4px darkblue outset;
+        border-radius: 15px;
+        background-color: azure;
+        grid-area: preview;
+        img{
+            display: inline;
+            width: 370px;
+        }
+    }
+    .form{
+        padding: 5px 0px 5px 5px;
+        position: relative;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 245px;
+        background-color: whitesmoke;
+        grid-area: form;
+        label{
+            text-align: left;
+            width: 150px;
+        }
+        input{
+            left: 150px;
+            width: 130px;
+        }
+        textarea{
+            height: 200px;
+            width: 236px;
+        }
+    }
+    .table{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        background-color: whitesmoke;
+        grid-area: villes;
+        table{
+            display: inline-block;
+        }
+    }
+    footer{
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        background-color: $bgColor;
+        grid-area: footer;
+        img{
+            width: 60px;
+        }
+    }
+    display: grid;
+    grid-template-columns: 15% 15% 70%;
+    grid-template-rows: 10% 3.6% 41% 38.4% 7%;
+    grid-template-areas:
+    "icon titulo titulo"
+    "icon lista lista"
+    "preview preview preview"
+    "form villes villes"
+    "footer footer footer";
+}
